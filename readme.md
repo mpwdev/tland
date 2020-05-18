@@ -12,8 +12,8 @@ Work in progress
 
 ## 1. Basic information
 
-1.1 - _AJAX handler_ refers to the file created under `wp-content/ajax-handler.php`
-1.2 - _AJAX tracking_ or _Frontend tracking_ refers to the first tracking method under _Advanced Ads > Settings > Tracking_. It is possible that it could be used also in some cases when another method is selected
+- _AJAX handler_ refers to the file created under `wp-content/ajax-handler.php`
+- _AJAX tracking_ or _Frontend tracking_ refers to the first tracking method under _Advanced Ads > Settings > Tracking_. It is possible that it could be used also in some cases when another method is selected
 - _new ad_ - could be any ad type with any content. The most simple is just using the _Dummy_ ad type with a title of your choice. If you need different ads then use the _plain text and code_ ad type with code from [this page](https://wpadvancedads.com/codex/ad-placeholder/)
 - “local” tracking method refers to any method storing impressions and clicks in our database, e.g., “AJAX” or ”on load”, but not “Analytics”
 - _new placement - find placements under _Advanced Ads > Placements_ or right after an ad was published for the first time. The best default placement for quick testing is _Before Content_.
@@ -23,13 +23,13 @@ Work in progress
 - constants are always set in `wp-config.php` above the `That’s all...` comment with a line like `define( 'ABC', 'value' );` Our instructions might say “Set ABC to 'value'”
 - ignore the sections saying `[needs more details]`. We only need to test them for larger changes or when these are likely to be relevant
 
-## Analytics tracking
+## 2. Analytics tracking
 
 Analytics tracking can be verified by looking for the `batch` call in the Network tab of the browser’s developer tools
 
-- [ ] after switching to Analytics tracking, no impressions and clicks are tracked locally, there is no call to any AJAX tracking either, especially to `ajax-handler.php`
-- [ ] the file `wp-content/admin-ajax.php` is removed when Analytics tracking is the main method
-- [ ] in the frontend, one should find the call to `batch` in the Network tab with names and IDs of the ads to track in the parameters
+- [ ] 2.1 after switching to Analytics tracking, no impressions and clicks are tracked locally, there is no call to any AJAX tracking either, especially to `ajax-handler.php`
+- [ ] 2.2 the file `wp-content/admin-ajax.php` is removed when Analytics tracking is the main method
+- [ ] 2.3 in the frontend, one should find the call to `batch` in the Network tab with names and IDs of the ads to track in the parameters
 - [ ] works with multiple ads, but only sends one tracking call to Analytics for all of them
 - [ ] switch to _Google Analytics_ tracking under _Advanced Ads > Settings > Tracking_ and save the options. You should now find the _Google Analytics_ option to enter the Analytics Tracking ID
 - [ ] [needs more details] one should find the impression tracking in the Live events report in the Analytics account
