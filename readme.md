@@ -27,13 +27,13 @@ Work in progress
 
 Analytics tracking can be verified by looking for the `batch` call in the Network tab of the browser’s developer tools
 
-- [ ] 2.1 after switching to Analytics tracking, no impressions and clicks are tracked locally, there is no call to any AJAX tracking either, especially to `ajax-handler.php`
-- [ ] 2.2 the file `wp-content/admin-ajax.php` is removed when Analytics tracking is the main method
-- [ ] 2.3 in the frontend, one should find the call to `batch` in the Network tab with names and IDs of the ads to track in the parameters
-- [ ] works with multiple ads, but only sends one tracking call to Analytics for all of them
-- [ ] switch to _Google Analytics_ tracking under _Advanced Ads > Settings > Tracking_ and save the options. You should now find the _Google Analytics_ option to enter the Analytics Tracking ID
-- [ ] [needs more details] one should find the impression tracking in the Live events report in the Analytics account
-- [ ] set `define( 'ADVANCED_ADS_TRACKING_FORCE_ANALYTICS', true );` in `wp-config.php`. The “Your Tracking ID” option should show up _Advanced Ads > Settings > Tracking_ now even if Analytics is not the selected tracking method. Verify that it tracks now with Analytics and the other method
+- [ ] **2.1** after switching to Analytics tracking, no impressions and clicks are tracked locally, there is no call to any AJAX tracking either, especially to `ajax-handler.php`
+- [ ] **2.2** the file `wp-content/admin-ajax.php` is removed when Analytics tracking is the main method
+- [ ] **2.3** in the frontend, one should find the call to `batch` in the Network tab with names and IDs of the ads to track in the parameters
+- [ ] **2.4** works with multiple ads, but only sends one tracking call to Analytics for all of them
+- [ ] **2.5** switch to _Google Analytics_ tracking under _Advanced Ads > Settings > Tracking_ and save the options. You should now find the _Google Analytics_ option to enter the Analytics Tracking ID
+- [ ] **2.6** [needs more details] one should find the impression tracking in the Live events report in the Analytics account
+- [ ] **2.7** set `define( 'ADVANCED_ADS_TRACKING_FORCE_ANALYTICS', true );` in `wp-config.php`. The “Your Tracking ID” option should show up _Advanced Ads > Settings > Tracking_ now even if Analytics is not the selected tracking method. Verify that it tracks now with Analytics and the other method
 
 ## Test
 
