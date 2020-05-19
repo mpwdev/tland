@@ -23,14 +23,14 @@ Work in progress
 
 ## 2. After (first) install
 
-- [ ] `wp-content/ajax-handler.php` was created after plugin activation.
-- [ ] the file contains DB credentials and other information about the environment
-- [ ] the file returns `no ads` when accessed directly in the browser under `wp-content/ajax-handler.php`
-- [ ] the file updates when credentials change, Test: change the debug option. `ajax-handler.php` should be updated afterward
-- [ ] _AJAX_ is the default tracking method under _Advanced Ads > Settings > Tracking_
-- [ ] we remove the AJAX handler file if it does not create the expected output on installation. To reproduce this: 1. add die( 'test' ); at the top of `nowp-ajax-handler.php`; 2. delete the file `wp-content/ajax-handler.php` (if exists); 3. reload a page in wp-admin
+- [ ] **2.1** `wp-content/ajax-handler.php` was created after plugin activation.
+- [ ] **2.2** the file contains DB credentials and other information about the environment
+- [ ] **2.3** the file returns `no ads` when accessed directly in the browser under `wp-content/ajax-handler.php`
+- [ ] **2.4** the file updates when credentials change, Test: change the debug option. `ajax-handler.php` should be updated afterward
+- [ ] **2.5** _AJAX_ is the default tracking method under _Advanced Ads > Settings > Tracking_
+- [ ] **2.6** we remove the AJAX handler file if it does not create the expected output on installation. To reproduce this: 1. add die( 'test' ); at the top of `nowp-ajax-handler.php`; 2. delete the file `wp-content/ajax-handler.php` (if exists); 3. reload a page in wp-admin
 
-## Tracking
+## 3. Tracking
 
 Basic setup:
 
