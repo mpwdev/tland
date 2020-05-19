@@ -37,20 +37,20 @@ Basic setup:
 - create a new "Dummy" ad in the "Before Content" placement
 - visit a single post page in the frontend where the ad should then show up (and be tracked)
 
-### general (check for all methods)
+### 3.1 general (check for all methods)
 
-- [ ] stats are visible for the ads under _Advanced Ads > Stats_
-- [ ] ignore logged-in users after the line `define( 'ADVANCED_ADS_TRACKING_IGNORE_LOGGED_IN_USERS', true )` was added to `wp-config.php`
+- [ ] **3.1.1** stats are visible for the ads under _Advanced Ads > Stats_
+- [ ] **3.1.2** ignore logged-in users after the line `define( 'ADVANCED_ADS_TRACKING_IGNORE_LOGGED_IN_USERS', true )` was added to `wp-config.php`
 
-### AJAX tracking
+### 3.2 AJAX tracking
 
 Set the tracking method to "AJAX”/"Frontend” under _Advanced Ads > Settings > Tracking_
 
-- [ ] a newly published ad is visible in the call to `ajax-handler.php`
-- [ ] works with multiple ads as well, though only a single AJAX call is sent for all of them together
-- [ ] fall back to using `admin-ajax.php` when `ajax-handler.php` was removed; Test: remove the file via FTP and then track in frontend (loading the backend should create the file again)
-- [ ] [needs more details] show warning about using `admin-ajax.php` if our handler cannot be created; Test: empty the file and set permissions to `000`, then update the debug option to force the file to be rewritten
-- [ ] set `ADVANCED_ADS_TRACKING_LEGACY_AJAX` constant to `true`, reload a page in WP Admin => In the Network tab, you should now no longer find a call to `ajax-handler.php` but to `admin-ajax.php` with the ad IDs in the call.
+- [ ] **3.2.1** a newly published ad is visible in the call to `ajax-handler.php`
+- [ ] **3.2.2** works with multiple ads as well, though only a single AJAX call is sent for all of them together
+- [ ] **3.2.3** fall back to using `admin-ajax.php` when `ajax-handler.php` was removed; Test: remove the file via FTP and then track in frontend (loading the backend should create the file again)
+- [ ] **3.2.4** [needs more details] show warning about using `admin-ajax.php` if our handler cannot be created; Test: empty the file and set permissions to `000`, then update the debug option to force the file to be rewritten
+- [ ] **3.2.5** set `ADVANCED_ADS_TRACKING_LEGACY_AJAX` constant to `true`, reload a page in WP Admin => In the Network tab, you should now no longer find a call to `ajax-handler.php` but to `admin-ajax.php` with the ad IDs in the call.
 
 Setup:
 
@@ -59,7 +59,7 @@ Setup:
 - scroll down to click on _Rebuild asset folder_
 - install and enable an ad blocker in your browser, e.g., “Adblock Plus”
 
-- [ ] AJAX tracking works also with ad blockers
+- [ ] **3.2.6** AJAX tracking works also with ad blockers
 
 ### On load tracking
 
